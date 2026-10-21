@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력창과 버튼</title>
+  </head>
+  <body>
+    <form>
+      <label for="user-name">이름</label>
+      <input
+        type="text"
+        id="user-name"
+        name="userName"
+        placeholder="이름을 입력하세요"
+      />
+      <br />
+      <label for="message">배우고 싶은 것</label>
+      <textarea id="message" name="message" rows="3"></textarea>
+      <br />
+      <label for="topic">먼저 배우고 싶은 주제</label>
+      <select id="topic" name="topic">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+      </select>
+      <br />
+      <fieldset>
+        <legend>관심 분야</legend>
+        <input type="checkbox" id="web" name="interest" value="web" />
+        <label for="web">웹 개발</label>
+        <input type="checkbox" id="design" name="interest" value="design" />
+        <label for="design">디자인</label>
+      </fieldset>
+      <fieldset>
+        <legend>관심 분야</legend>
+        <input type="radio" id="web" name="interest" value="web" />
+        <label for="web">웹 개발</label>
+        <input type="radio" id="design" name="interest" value="design" />
+        <label for="design">디자인</label>
+      </fieldset>
+      <button type="button">확인</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록과 인라인</title>
+    <style>
+      .keyword {
+        color: red;
+      }
+      /* 블록과 인라인은 디스플레이 쌍방으로 변경 가능 */
+      a {
+        display: inline-block;
+        width: 140px;
+        padding: 8px;
+        background-color: #eaf2ff;
+      }
+      p {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- h1,p,div는 블록 요소 -->
+    <p>첫 번째 문단</p>
+    <p>두 번째 문단</p>
+    <!-- 인라인 요소 span, a -->
+    <p>좋아하는 것은 <span class="keyword">음악</span>입니다.</p>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.wikipedia.org/">Wikipedia</a>
+  </body>
+</html>
