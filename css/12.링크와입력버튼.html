@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>링크와입력버튼</title>
+    <style>
+      .site-link {
+        color: #174ea6;
+        text-decoration: none;
+      }
+      .site-link:hover {
+        color: yellowgreen;
+      }
+      .action-button {
+        background-color: #174ea6;
+        color: white;
+        border: 1px solid #174ea6;
+        border-radius: 8px;
+        padding: 10px 16px;
+        transition: background-color 0.2s;
+      }
+      .action-button:hover {
+        background-color: yellowgreen;
+        cursor: pointer;
+      }
+      .site-link:focus-visible,
+      .action-button:focus-visible {
+        outline: 3px solid #174ea6;
+        outline-offset: 3px;
+      }
+      .name-input {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 320px;
+        padding: 10px;
+        border: 1px solid #666666;
+        border-radius: 8px;
+        font: inherit;
+      }
+      .name-input:focus-visible {
+        outline: 3px solid #174ea6;
+        outline-offset: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="site-link" href="https://www.google.com/">Google 검색 열기</a>
+    <button class="action-button" type="button">확인</button>
+    <br /><br />
+    <label for="user-name">이름</label>
+    <input class="name-input" type="text" id="user-name" name="userName" />
+  </body>
+</html>
+<!-- :hover 마우스가 올라갔을때 css가 가동/ :focus-visible 키보드로 사용 가능 -->

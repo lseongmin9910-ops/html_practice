@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>크기정하기</title>
+    <style>
+      .box {
+        width: 50%;
+      }
+      .card {
+        width: 100%;
+        /* max-width: 600px; */
+        /* 박스사이즈 기준 100px로 맞춤 */
+        box-sizing: border-box;
+        padding: 20px;
+        border: 2px solid navy;
+      }
+      .profile-photo {
+        width: 300px;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <section class="card">
+        <h2>소개</h2>
+        <p>웹 개발을 배우고 있어요.</p>
+      </section>
+      <section class="card">
+        <h2>관심사</h2>
+        <p>음악과 산책을 좋아해요.</p>
+      </section>
+      <section class="card">
+        <h2>사진</h2>
+        <img class="profile-photo" src="photo.jpg" alt="강아지" />
+      </section>
+    </div>
+  </body>
+</html>

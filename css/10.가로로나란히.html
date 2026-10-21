@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가로로나란히</title>
+    <style>
+      body {
+        margin: 12px;
+      }
+      .profile {
+        background-color: greenyellow;
+        height: 100vh;
+        width: 100vw;
+        /* 부모에서 플렉스 사용해서 자식을 나란히 */
+        display: flex;
+        /* 사진과 텍스트 간의 간격 */
+        gap: 20px;
+        /* 세로로 정렬 */
+        align-items: center;
+        justify-content: center;
+      }
+      .profile-photo {
+        width: 140px;
+        max-width: 100%;
+        height: auto;
+      }
+      /* 미디어쿼리를 이용해 반응형 디자인 */
+      @media (max-width: 420px) {
+        .profile {
+          flex-direction: column;
+          align-items: center;
+        }
+        .profile-photo {
+          width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="profile">
+      <img class="profile-photo" src="photo.jpg" alt="공원에서 산책하는 모습" />
+      <div>
+        <h2 class="rainbow">나를 소개해요</h2>
+        <p>웹 개발을 배우고 있어요.</p>
+      </div>
+    </section>
+  </body>
+</html>
+<!-- flex개구리연습하기 -->
