@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid배치</title>
+    <style>
+      .topic-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* 3열로 배치 */
+        gap: 16px; /* 간격 */
+      }
+      .topic-card {
+        min-width: 0;
+        padding: 20px;
+        background-color: #f0f7ff;
+        border: 1px solid #cccccc;
+        border-radius: 12px;
+        overflow-wrap: anywhere;
+      }
+      @media (max-width: 600px) {
+        .topic-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topic-grid">
+      <section class="topic-card">
+        <h2>HTML</h2>
+        <p>페이지의 내용을 만들어요.</p>
+      </section>
+      <section class="topic-card">
+        <h2>CSS</h2>
+        <p>페이지의 모양을 꾸며요.</p>
+      </section>
+      <section class="topic-card">
+        <h2>JavaScript</h2>
+        <p>클릭에 반응하는 동작을 만들어요.</p>
+      </section>
+      <section class="topic-card">
+        <h2>AI 활용</h2>
+        <p>질문하고 결과를 확인해요.</p>
+      </section>
+      <section class="topic-card">
+        <h2>JavaScript</h2>
+        <p>클릭에 반응하는 동작을 만들어요.</p>
+      </section>
+      <section class="topic-card">
+        <h2>AI 활용</h2>
+        <p>질문하고 결과를 확인해요.</p>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그라디언트 소개 배너</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: sans-serif;
+        line-height: 1.6;
+        background-color: #f3f6fb;
+        color: #1f2937;
+      }
+      .page {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid #174ea6;
+        outline-offset: 4px;
+      }
+      .hero {
+        min-height: 360px;
+        padding: 48px 24px;
+        display: flex;
+        align-items: center;
+        color: white;
+        /* background-color: #17355c; */
+        /* linear-gradient 색깔을 섞을수 있음 */
+        background-image: linear-gradient(135deg, red, blue);
+        border-radius: 20px;
+      }
+      .hero-content {
+        width: 100%;
+        max-width: 560px;
+      }
+      .hero h1 {
+        margin-top: 0;
+        font-size: 32px;
+      }
+      .hero-link {
+        display: inline-block;
+        padding: 10px 16px;
+        background-color: white;
+        color: #17355c;
+        border-radius: 8px;
+      }
+      .hero-link:focus-visible {
+        outline-color: white;
+      }
+      .about {
+        margin-top: 32px;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="hero-content">
+          <p>나의 첫 포트폴리오</p>
+          <h1>배우고 만들며 성장합니다</h1>
+          <p>HTML과 CSS로 나만의 공간을 만들고 있어요.</p>
+          <a class="hero-link" href="#about">소개 읽기</a>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <h2>나를 소개해요</h2>
+        <p>작은 결과를 하나씩 만들며 웹 개발을 배우고 있습니다.</p>
+      </section>
+    </main>
+  </body>
+</html>

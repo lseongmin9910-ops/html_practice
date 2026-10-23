@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용하기 편한 문의 폼</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: sans-serif;
+        line-height: 1.6;
+        background-color: #f3f6fb;
+        color: #1f2937;
+      }
+      .page {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid #174ea6;
+        outline-offset: 4px;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 16px;
+        }
+        /* 폼과 입력창 꾸미기 */
+        .contact-form {
+          width: 100%;
+          max-width: 720px;
+          padding: 24px;
+          border: 1px solid #d1d5db;
+          border-radius: 16px;
+          background-color: white;
+        }
+        .form-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+        .field {
+          min-width: 0;
+          margin-bottom: 20px;
+        }
+        .field label {
+          display: block;
+          margin-bottom: 6px;
+          font-weight: bold;
+        }
+        .field input,
+        .field select,
+        .field textarea {
+          width: 100%;
+          padding: 10px 12px;
+          border: 1px solid #64748b;
+          border-radius: 8px;
+          background-color: white;
+          color: #1f2937;
+          font: inherit;
+        }
+        .field textarea {
+          min-height: 120px;
+          resize: vertical;
+        }
+        @media (max-width: 600px) {
+          .form-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        /* 초점과 체크박스 */
+        .field input:focus-visible,
+        .field select:focus-visible,
+        .field textarea:focus-visible,
+        .consent input:focus-visible {
+          outline: 3px solid #174ea6;
+          outline-offset: 3px;
+        }
+        .consent {
+          display: flex;
+          align-items: flex-start;
+          gap: 8px;
+          margin-bottom: 20px;
+        }
+        .consent input {
+          margin-top: 6px;
+          accent-color: #174ea6;
+        }
+        /* 버튼 css */
+        .form-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+        .form-actions button {
+          padding: 12px 18px;
+          border: 1px solid #174ea6;
+          border-radius: 8px;
+          background-color: #174ea6;
+          color: white;
+          font: inherit;
+          /* 마우스 올리면 손가락으로 변경 */
+          cursor: pointer;
+        }
+        .submit-button:hover {
+          background-color: #0b306e;
+        }
+        .form-actions button:disabled {
+          background-color: #e2e8f0;
+          border-color: #cbd5e1;
+          color: #475569;
+          cursor: not-allowed;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <h1 id="form-title">프로젝트 문의</h1>
+      <p id="form-note">
+        디자인 연습용 폼입니다. 입력 내용은 저장하거나 전송하지 않습니다.
+      </p>
+      <form
+        class="contact-form"
+        aria-labelledby="form-title"
+        aria-describedby="form-note"
+      >
+        <div class="form-grid">
+          <div class="field">
+            <label for="user-name">이름 (필수)</label>
+            <input
+              id="user-name"
+              name="userName"
+              type="text"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="user-email">이메일 (필수)</label>
+            <input
+              id="user-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label for="topic">문의 종류</label>
+          <select id="topic" name="topic">
+            <option value="design">디자인 문의</option>
+            <option value="website">웹페이지 제작 문의</option>
+            <option value="other">기타</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">문의 내용</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="sampleConsent" />
+          <span>연습용 확인 항목을 읽었습니다.</span>
+        </label>
+        <div class="form-actions">
+          <button class="submit-button" type="button">
+            입력 확인 (디자인 예시)
+          </button>
+          <button type="button" disabled>전송 준비 중</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

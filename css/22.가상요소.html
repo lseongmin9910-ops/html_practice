@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가상 요소 장식 만들기</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: sans-serif;
+        line-height: 1.6;
+        background-color: #f3f6fb;
+        color: #1f2937;
+      }
+      .page {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid #174ea6;
+        outline-offset: 4px;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 16px;
+        }
+        .section-title {
+          margin-bottom: 32px;
+        }
+        .feature-card {
+          position: relative;
+          padding: 32px 24px 24px;
+          margin-bottom: 32px;
+          background-color: white;
+          border: 1px solid #d1d5db;
+          border-radius: 16px;
+        }
+        .feature-card h2 {
+          margin-top: 0;
+        }
+        .feature-card a {
+          color: #174ea6;
+        }
+        /* 가상요소 제목 아래에 장식선 */
+        .section-title::after {
+          content: "";
+          display: block;
+          width: 64px;
+          height: 4px;
+          margin-top: 12px;
+          border-radius: 4%;
+          background-color: #174ea6;
+        }
+        /* 가상요소 카드 위의 장식 */
+        .feature-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 24px;
+          width: 64px;
+          height: 4px;
+          background-image: linear-gradient(to right, #174ea6, #146c43);
+          pointer-events: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <h1 class="section-title">나의 관심 분야</h1>
+      <article class="feature-card">
+        <h2>웹 디자인</h2>
+        <p>읽기 쉽고 사용하기 편한 페이지를 만들고 싶어요.</p>
+        <a href="#note">학습 목표 읽기</a>
+      </article>
+      <section id="note">
+        <h2>학습 목표</h2>
+        <p>중요한 내용은 HTML에 적고 장식은 CSS로 더합니다.</p>
+      </section>
+    </main>
+  </body>
+</html>

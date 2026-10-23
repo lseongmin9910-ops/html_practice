@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>읽기 쉬운 학습 시간표</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: sans-serif;
+        line-height: 1.6;
+        background-color: #f3f6fb;
+        color: #1f2937;
+      }
+      .page {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid #174ea6;
+        outline-offset: 4px;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 16px;
+        }
+        /* 테이블 css */
+        .table-scroll {
+          margin-top: 24px;
+          border: 1px solid #cbd5e1;
+          border-radius: 12px;
+        }
+        .schedule-table {
+          width: 100%;
+          /* 이중 보더를 합침 */
+          border-collapse: collapse;
+          background-color: white;
+        }
+        .schedule-table caption {
+          padding: 16px;
+          text-align: center;
+          font-weight: bold;
+          background-color: white;
+        }
+        .schedule-table th,
+        .schedule-table td {
+          padding: 14px 16px;
+          border-bottom: 1px solid #cbd5e1;
+          text-align: center;
+          vertical-align: top;
+        }
+        .schedule-table thead th {
+          background-color: #17355c;
+          color: white;
+        }
+        .schedule-table .number {
+          text-align: right;
+        }
+        /* 줄무늬와 행 강조 */
+        .schedule-table tbody tr:nth-child(odd) {
+          background-color: #eef4fc;
+        }
+        .schedule-table tbody tr:hover {
+          background-color: #dbeafe;
+        }
+        /* 가로스크롤 */
+        .table-scroll {
+          max-width: 100%;
+          overflow-x: auto;
+          /* 세로스크롤 */
+          height: 300px;
+          overflow-y: auto;
+        }
+        .table-scroll:focus-visible {
+          outline: 3px solid #174ea6;
+          outline-offset: 4px;
+        }
+        .schedule-table {
+          min-width: 640px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <h1 id="schedule-title">나의 주간 학습 시간표</h1>
+      <p id="scroll-help">화면이 좁으면 표 영역을 가로로 스크롤해 보세요.</p>
+      <!-- 테이블 테두리 -->
+      <div
+        class="table-scroll"
+        role="region"
+        aria-labelledby="schedule-title"
+        aria-describedby="scroll-help"
+        tabindex="0"
+      >
+        <table class="schedule-table">
+          <caption>
+            월요일부터 목요일까지의 학습 계획
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">요일</th>
+              <th scope="col">학습 주제</th>
+              <th scope="col">실습 결과</th>
+              <th scope="col">시간</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">월요일</th>
+              <td>배경 이미지</td>
+              <td>소개 배너 만들기</td>
+              <td class="number">60분</td>
+            </tr>
+            <tr>
+              <th scope="row">화요일</th>
+              <td>그림자와 움직임</td>
+              <td>프로젝트 카드 꾸미기</td>
+              <td class="number">90분</td>
+            </tr>
+            <tr>
+              <th scope="row">수요일</th>
+              <td>문의 폼</td>
+              <td>입력창과 초점 확인</td>
+              <td class="number">60분</td>
+            </tr>
+            <tr>
+              <th scope="row">목요일</th>
+              <td>테이블 스타일</td>
+              <td>읽기 쉬운 시간표 만들기</td>
+              <td class="number">60분</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
